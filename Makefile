@@ -10,10 +10,10 @@ PROJECT = main
 ### Source files and search directory
 CSRC    = main.c 
 ASRC    = 
-VPATH   = 
+VPATH   =  
 DEVICE  = atmega1284p
 F_OSC   = 8000000
-AVRDUDE = avrdude -c usbasp -P usbasp -p atmega1284p -U flash:w:$(PROJECT).hex:i 
+AVRDUDE = avrdude -c usbasp -P usbasp -p $(DEVICE) -U flash:w:$(PROJECT).hex:i 
 
 ###############################################################################
 #
